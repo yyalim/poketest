@@ -1,15 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import HelloWorld from './HelloWorld';
+import PokemonListPage from './PokemonListPage';
 
 function setup() {
   const props = {};
-  const wrapper = shallow(<HelloWorld />);
+  const wrapper = shallow(<PokemonListPage />);
   return { wrapper, props };
 }
 
-describe('HelloWorld test suite', () => {
+describe('PokemonListPage test suite', () => {
   it('Should have an p tag', () => {
     const { wrapper } = setup();
 
