@@ -51,7 +51,10 @@ module.exports = {
         },
       },
     ], // for nested label htmlFor error
-
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.test.js', 'webpack.*'] },
+    ],
     'prettier/prettier': [
       'error',
       {
