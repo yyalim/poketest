@@ -1,3 +1,19 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  background: #f5f3f3;
+}
+
 body {
+  font-family: system, -apple-system, ".SFNSDisplay-Regular", HelveticaNeue, Arial;
+  margin: 0;
   width: 100%;
+  padding: 0 20px;
 }
