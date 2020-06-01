@@ -1,20 +1,29 @@
-.pokemon-list {
+.pokemon-list-page--search-container {
+  margin: 20px 0;
+}
+
+.pokemon-list-page--search {
+  display: block;
+  margin: 0 auto;
+}
+
+.pokemon-list-page--pokemon-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 10px;
-  margin: 0 auto 100px;
+  margin: 20px auto 100px;
   width: 100%;
   max-width: 900px;
 }
 
 @media screen and (min-width: 400px) {
-  .pokemon-list {
+  .pokemon-list-page--pokemon-list {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 940px) {
-  .pokemon-list {
+  .pokemon-list-page--pokemon-list {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
