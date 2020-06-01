@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { handleGetPokemonDetailAction } from '../../store/pokemons';
 import PokemonDetail from '../PokemonDetail';
+import LoadingIndicator from '../LoadingIndicator';
 
 export default function PokemonListPage() {
   const { name } = useParams();
@@ -14,5 +15,5 @@ export default function PokemonListPage() {
     dispatch(handleGetPokemonDetailAction(name));
   }, []);
 
-  return loading ? <p>Loading...</p> : <PokemonDetail {...details} />;
+  return loading ? <LoadingIndicator /> : <PokemonDetail {...details} />;
 }
