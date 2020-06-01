@@ -9,7 +9,7 @@ function setup() {
   return { wrapper, props };
 }
 
-describe('PokemonDetailPage test suite', () => {
+describe('PokemonLink test suite', () => {
   it('Should get name of the pokemon from url param', () => {
     const { wrapper } = setup();
 

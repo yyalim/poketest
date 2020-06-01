@@ -1,4 +1,5 @@
 import { getPokemonList, getPokemonDetail } from '../utils/api';
+import { setLoading, unsetLoading } from './loading';
 
 export const GET_POKEMON_LIST = 'GET_POKEMON_LIST';
 export const GET_POKEMON_DETAIL = 'GET_POKEMON_DETAIL';
@@ -29,7 +30,10 @@ export function getPokemonListAction(pokemons) {
 
 export function handleGetPokemonListAction() {
   return (dispatch) => {
-    return getPokemonList().then((pokemons) => dispatch(getPokemonListAction(pokemons)));
+    dispatch(setLoading());
+    return getPokemonList()
+      .then((pokemons) => dispatch(getPokemonListAction(pokemons)))
+      .then(() => dispatch(unsetLoading()));
   };
 }
 
@@ -42,6 +46,9 @@ export function getPokemonDetailAction(pokemon) {
 
 export function handleGetPokemonDetailAction(name) {
   return (dispatch) => {
-    return getPokemonDetail(name).then((pokemon) => dispatch(getPokemonDetailAction(pokemon)));
+    dispatch(setLoading());
+    return getPokemonDetail(name)
+      .then((pokemon) => dispatch(getPokemonDetailAction(pokemon)))
+      .then(() => dispatch(unsetLoading()));
   };
 }

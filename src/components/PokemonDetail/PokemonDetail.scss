@@ -1,0 +1,51 @@
+.pokemon-detail {
+  position: relative;
+  background: #fff;
+  margin: 30px auto;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 300px;
+
+}
+
+.pokemon-detail--homepage-link {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 10px;
+  height: 10px;
+  font-size: 30px;
+  text-decoration: none;
+  line-height: 10px;
+  text-align: center;
+  color: #000;
+  &:hover {
+    color: #e31238;
+  }
+  &:after {
+    content: "\00d7";
+  }
+}
+
+.pokemon-detail--image {
+  display: block;
+  margin: 10px auto;
+}
+
+.pokemon-detail--name {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.pokemon-detail--field {
+  margin-left: 15px;
+}
+
+.pokemon-detail--label {
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.pokemon-detail--abilty {
+  text-transform: capitalize;
+}
