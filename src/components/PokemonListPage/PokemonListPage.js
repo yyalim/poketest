@@ -35,15 +35,16 @@ export default function PokemonListPage() {
           onChange={handleSearchChange}
         />
       </div>
-
       {loading && <LoadingIndicator />}
-      <div className="pokemon-list-page--pokemon-list">
-        {Object.keys(pokemons)
-          .filter(filterByName)
-          .map((pokemonName) => (
-            <PokemonLink key={pokemonName} name={pokemonName} />
-          ))}
-      </div>
+      {!loading && (
+        <div className="pokemon-list-page--pokemon-list">
+          {Object.keys(pokemons)
+            .filter(filterByName)
+            .map((pokemonName) => (
+              <PokemonLink key={pokemonName} name={pokemonName} />
+            ))}
+        </div>
+      )}
     </div>
   );
 }
